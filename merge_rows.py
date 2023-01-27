@@ -27,7 +27,10 @@ country_name_matches = [
 ("gambia", "the gambia"),
 ("guinea", "french guiana"),
 ("congo", "republic of the congo"),
-("czech republic", "czechia")
+("czech republic", "czechia"),
+("cote d'ivoire", "cote d'ivoire"),
+("guinea-bissau", "guinea bissau"),
+("yemen arab republic", "people's republic of yemen")
 ]
 
 # READ IN CSV
