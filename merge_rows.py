@@ -4,6 +4,29 @@ import csv
 input_file_name = "./datasets_for_rname_change.csv"
 output_file_name = "./countries_without_duplicates.csv"
 country_name_matches = [
+("bolivia", "bolivia (plurinational state of)"),
+("brunei", "brunei Darussalam"),
+("central african rep.", "central african republic"),
+("democratic people’s republic of korea", "south korea"),
+("lao people’s democratic republic", "laos"),
+("rep. of korea", "north korea"),
+("viet nam", "vietnam"),
+("rep. of moldova", "moldova"),
+("russian federation", "russia"),
+("north macedonia", "macedonia"),
+("türkiye", "turkey"),
+("united kingdom of great britain and northern ireland", "united kingdom"),
+("united states of america", "united states"),
+("dominican rep.", "dominican republic"),
+("venezuela (bolivarian republic of)", "venezuela"),
+("iran (islamic rep. of)", "iran"),
+("state of palestine", "palestine"),
+("syrian arab rep.", "syria"),
+("eswatini", "swaziland"),
+("united rep. of tanzania", "tanzania"),
+("gambia", "the gambia"),
+("guinea", "french guiana"),
+("congo", "republic of the congo"),
 ("czech republic", "czechia")
 ]
 
@@ -18,7 +41,6 @@ with open(input_file_name) as f:
 NA = ["NA"]
 
 print("Number of countries before duplicate removal:", len(countries_with_duplicates))
-
 # MERGE TWO ROWS 
 def merge_rows(row_1, row_2):
     new_row = []
@@ -32,7 +54,7 @@ def merge_rows(row_1, row_2):
 
 # CHECK TWO ROWS ARE REALLY THE SAME COUNTRY
 def country_match(country_name_1, country_name_2, country_matches):
-    for matches in country_name_matches:
+    for matches in country_matches:
         if country_name_1.lower() in matches and country_name_2.lower() in matches:
             return True
     return False
